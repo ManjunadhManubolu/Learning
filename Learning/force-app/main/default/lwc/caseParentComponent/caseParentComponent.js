@@ -7,7 +7,8 @@ export default class CaseParentComponent extends LightningElement {
         this.comment = event.detail;
         console.log('Received Comments input at Parent ' + this.comment);
     }
-    // handleClick(event) {
+    // handleClick(event)
+    {
     //     const recordInput = {
     //         apiName: CASECOMMENT_OBJECT.objectApiName,
     //         fields: {
@@ -17,7 +18,8 @@ export default class CaseParentComponent extends LightningElement {
     //     };
     //     createRecord(recordInput).then(result => { console.log('Record Created Successfully') }).catch(error => { console.log('Error while creating record' + JSON.stringify(error)) });
     // }
-    handleClick(event) {
+    handleClick(event)
+    {
         createCaseComments({ commentsBody: this.comment, parentCaseId: this.recordId }).then(result => {
             console.log('Record Created Successfully ' + JSON.stringify(result))
         }).catch(error => {
