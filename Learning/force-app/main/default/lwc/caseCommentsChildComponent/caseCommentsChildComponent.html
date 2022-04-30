@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-m-around_medium">
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <textarea id="textarea-id-01" class="slds-textarea" 
+                onchange={dispatchChangeToParent}></textarea>
+            </div>
+        </div>
+        <template if:true={existingCaseCommentsRecordsList}>
+            <lightning-datatable
+                key-field="Id"
+                data={existingCaseCommentsRecordsList}
+                columns={columns}
+                hide-checkbox-column
+                wrap-text-max-lines="4" 
+                class="slds-max-medium-table_stacked">
+            </lightning-datatable>
+        </template>   
+    </div>
+
+    <lightning-card title="CurrentPageReference Example">
+        {urlValue}
+    </lightning-card>
+</template>
